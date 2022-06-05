@@ -15,6 +15,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+DEVICE_PATH := device/samsung/a01core
 
-add_lunch_combo omni_a01core-userdebug
-add_lunch_combo omni_a01core-eng
+# Inherit from common AOSP config
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+
+# Inherit some common TWRP stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Inherit device configuration
+$(call inherit-product, $(DEVICE_PATH)/device.mk)
+
+# Charger
+PRODUCT_PACKAGES += charger_res_images
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root)
+
+## Device identifier. This must come after all inclusions
+PRODUCT_NAME := twrp_a01core
+PRODUCT_DEVICE := a01core
+PRODUCT_MODEL := SM-A013G
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
