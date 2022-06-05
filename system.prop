@@ -1,7 +1,7 @@
 ro.display.series=Samsung Galaxy A01 Core
-ro.product.board=k39tv1_bsp_1g_titan
+#ro.product.board=k39tv1_bsp_1g_titan
 ro.board.platform=mt6739
-ro.treble.enabled=true
+#ro.treble.enabled=true
 
 Build.BRAND=MTK
 ro.mediatek.rsc_name=default
