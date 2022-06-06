@@ -100,8 +100,7 @@ BOARD_MKBOOTIMG_ARGS := \
 	--header_version $(BOARD_BOOT_HEADER_VERSION) \
 	--board "SRPTE06B004" \
 	--dtb $(TARGET_PREBUILT_DTB) \
-	--dtb_offset $(BOARD_DTB_OFFSET) \
-	--recovery_dtbo $(BOARD_PREBUILT_DTBOIMAGE)
+	--dtb_offset $(BOARD_DTB_OFFSET)
 
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
