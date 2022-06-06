@@ -91,13 +91,11 @@ BOARD_DTB_OFFSET := 0x04000000
 BOARD_KERNEL_IMAGE_NAME := zImage
 
 BOARD_MKBOOTIMG_ARGS := \
-	--base $(BOARD_KERNEL_BASE) \
-	--pagesize $(BOARD_KERNEL_PAGESIZE) \
 	--kernel_offset $(BOARD_KERNEL_OFFSET) \
 	--ramdisk_offset $(BOARD_RAMDISK_OFFSET) \
 	--tags_offset $(BOARD_KERNEL_TAGS_OFFSET) \
 	--second_offset $(BOARD_KERNEL_SECOND_OFFSET) \
-	--header_version $(BOARD_BOOT_HEADER_VERSION) \
+	--header_version $(BOARD_BOOTIMG_HEADER_VERSION) \
 	--board "SRPTE06B004" \
 	--dtb $(TARGET_PREBUILT_DTB) \
 	--dtb_offset $(BOARD_DTB_OFFSET)
