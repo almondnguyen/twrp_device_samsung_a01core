@@ -1,43 +1,43 @@
-# mount point   fstype              device                      device2                         flags
+# mount point   fstype              device                      device2               flags
 # Dynamic Partitions
-/system         ext4                /dev/block/dm-0                                             flags=backup=1;display="System";wipeingui;
-/system_image   emmc                /dev/block/dm-0                                             flags=backup=1;display="System Image";flashimg=1;
-/vendor         ext4                /dev/block/dm-1                                             flags=backup=1;display="Vendor";wipeingui;
-/vendor_image   emmc                /dev/block/dm-1                                             flags=backup=1;display="Vendor Image";flashimg=1;
-/odm            ext4                /dev/block/dm-3                                             flags=backup=1;display="ODM";wipeingui;
-/odm_image      emmc                /dev/block/dm-3                                             flags=backup=1;display="ODM Image";flashimg=1;
-/product        ext4                /dev/block/dm-2                                             flags=backup=1;display="Product";wipeingui;
-/product_image  emmc                /dev/block/dm-2                                             flags=backup=1;display="Product Image";flashimg=1;
+/system         ext4                /dev/block/mapper/system                          wait,avb=vbmeta,logical,first_stage_mount,flags=backup=1;display="System";
+/system_image   emmc                /dev/block/mapper/system                          flags=backup=1;display="System Image";flashimg=1;wipeingui;
+/vendor         ext4                /dev/block/mapper/vendor                          wait,avb=vbmeta,logical,first_stage_mount,flags=backup=1;display="Vendor";
+/vendor_image   emmc                /dev/block/mapper/vendor                          flags=backup=1;display="Vendor Image";flashimg=1;wipeingui;
+/odm            ext4                /dev/block/mapper/odm                             wait,avb=vbmeta,logical,first_stage_mount,flags=backup=1;display="ODM";
+/odm_image      emmc                /dev/block/mapper/odm                             flags=backup=1;display="ODM Image";flashimg=1;wipeingui;
+/product        ext4                /dev/block/mapper/product                         wait,avb=vbmeta,logical,first_stage_mount,flags=backup=1;display="Product";
+/product_image  emmc                /dev/block/mapper/product                         flags=backup=1;display="Product Image";flashimg=1;wipeingui;
 
 # Physical partitions
-/metadata       ext4                /dev/block/platform/bootdevice/by-name/md_udc               flags=backup=1;display="Metadata";
-/boot           emmc                /dev/block/platform/bootdevice/by-name/boot                 flags=backup=1;flashimg=1;display="Boot";
-/recovery       emmc                /dev/block/platform/bootdevice/by-name/recovery             flags=backup=1;flashimg=1;display="Recovery";
-/data           f2fs                /dev/block/platform/bootdevice/by-name/userdata             flags=backup=1;length=-16384;
-/cache          ext4                /dev/block/platform/bootdevice/by-name/cache                flags=backup=1;display="Cache";
-/dtbo           emmc                /dev/block/platform/bootdevice/by-name/dtbo                 flags=backup=1;flashimg=1;display="DTBO";
-/param          emmc                /dev/block/platform/bootdevice/by-name/param                flags=backup=1;display="Param";
-/optics_image   emmc                /dev/block/platform/bootdevice/by-name/optics               flags=backup=1;flashimg=1;display="Optics Image";
-/prism_image    emmc                /dev/block/platform/bootdevice/by-name/prism                flags=backup=1;flashimg=1;display="Prism Image";
+/metadata       ext4                /dev/block/platform/bootdevice/by-name/md_udc     flags=backup=1;display="Metadata";
+/boot           emmc                /dev/block/platform/bootdevice/by-name/boot       flags=backup=1;flashimg=1;display="Boot";
+/recovery       emmc                /dev/block/platform/bootdevice/by-name/recovery   flags=backup=1;flashimg=1;display="Recovery";
+/data           f2fs                /dev/block/platform/bootdevice/by-name/userdata   flags=backup=1;display="Userdata";length=-16384;wipeingui;
+/cache          ext4                /dev/block/platform/bootdevice/by-name/cache      flags=backup=1;display="Cache";wipeingui;
+/dtbo           emmc                /dev/block/platform/bootdevice/by-name/dtbo       flags=backup=1;flashimg=1;display="DTBO";
+/param          emmc                /dev/block/platform/bootdevice/by-name/param      flags=backup=1;display="Param";
+/optics_image   emmc                /dev/block/platform/bootdevice/by-name/optics     flags=backup=1;flashimg=1;display="Optics Image";
+/prism_image    emmc                /dev/block/platform/bootdevice/by-name/prism      flags=backup=1;flashimg=1;display="Prism Image";
 /gz1            emmc                /dev/block/platform/bootdevice/by-name/gz1
-/misc           emmc                /dev/block/platform/bootdevice/by-name/misc                 flags=backup=1;flashimg=1;display="Misc";
-/efs            ext4                /dev/block/platform/bootdevice/by-name/efs                  flags=backup=1;backup=1;display="EFS";
-/sec_efs        ext4                /dev/block/platform/bootdevice/by-name/sec_efs              flags=backup=1;backup=1;subpartitionof=/efs;
-/md1img         emmc                /dev/block/platform/bootdevice/by-name/md1img               flags=backup=1;backup=1;display="Modem";
-/md1dsp         emmc                /dev/block/platform/bootdevice/by-name/md1dsp               flags=backup=1;backup=1;subpartitionof=/md1img
-/md3img         emmc                /dev/block/platform/bootdevice/by-name/md3img               flags=backup=1;backup=1;subpartitionof=/md1img
-/md1arm7        emmc                /dev/block/platform/bootdevice/by-name/md1arm7              flags=backup=1;backup=1;subpartitionof=/md1img
+/misc           emmc                /dev/block/platform/bootdevice/by-name/misc       flags=backup=1;flashimg=1;display="Misc";
+/efs            ext4                /dev/block/platform/bootdevice/by-name/efs        flags=backup=1;backup=1;display="EFS";
+/sec_efs        ext4                /dev/block/platform/bootdevice/by-name/sec_efs    flags=backup=1;backup=1;subpartitionof=/efs;
+/md1img         emmc                /dev/block/platform/bootdevice/by-name/md1img     flags=backup=1;backup=1;display="Modem";
+/md1dsp         emmc                /dev/block/platform/bootdevice/by-name/md1dsp     flags=backup=1;backup=1;subpartitionof=/md1img
+/md3img         emmc                /dev/block/platform/bootdevice/by-name/md3img     flags=backup=1;backup=1;subpartitionof=/md1img
+/md1arm7        emmc                /dev/block/platform/bootdevice/by-name/md1arm7    flags=backup=1;backup=1;subpartitionof=/md1img
 /dtbo           emmc                /dev/block/platform/bootdevice/by-name/dtbo
 /spmfw          emmc                /dev/block/platform/bootdevice/by-name/spmfw
 /scp1           emmc                /dev/block/platform/bootdevice/by-name/scp1
 /sspm_1         emmc                /dev/block/platform/bootdevice/by-name/sspm_1        
 
 # Removable storage
-/external_sd    auto                /dev/block/mmcblk1p1        /dev/block/mmcblk1              flags=storage;wipeingui;removable;display="External SDcard";
-/usb-otg        auto                /dev/block/sda1             /dev/block/sda                  flags=display="USB-OTG";storage;wipeingui;removable;
+/external_sd    auto                /dev/block/mmcblk1p1        /dev/block/mmcblk1    flags=storage;wipeingui;removable;display="External SDcard";
+/usb-otg        auto                /dev/block/sda1             /dev/block/sda        flags=display="USB-OTG";storage;wipeingui;removable;
 
 # Temporarily generated to workaround Magisk bug on MTK A-only
-/nvram          emmc                /dev/block/platform/bootdevice/by-name/nvram                flags=display="NVRAM";backup=1;
-/nvcfg          emmc                /dev/block/platform/bootdevice/by-name/nvcfg                flags=display="NVCFG";backup=1;subpartitionof=/nvram;
-/nvdata         emmc                /dev/block/platform/bootdevice/by-name/nvdata               flags=display="NVDATA";backup=1;subpartitionof=/nvram;
-/persistent     emmc                /dev/block/platform/bootdevice/by-name/persistent           flags=display="PERSISTENT";backup=1;subpartitionof=/nvram;
+/nvram          emmc                /dev/block/platform/bootdevice/by-name/nvram      flags=display="NVRAM";backup=1;
+/nvcfg          emmc                /dev/block/platform/bootdevice/by-name/nvcfg      flags=display="NVCFG";backup=1;subpartitionof=/nvram;
+/nvdata         emmc                /dev/block/platform/bootdevice/by-name/nvdata     flags=display="NVDATA";backup=1;subpartitionof=/nvram;
+/persistent     emmc                /dev/block/platform/bootdevice/by-name/persistent flags=display="PERSISTENT";backup=1;subpartitionof=/nvram;
