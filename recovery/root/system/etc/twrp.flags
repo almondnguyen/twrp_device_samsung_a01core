@@ -21,12 +21,12 @@
 /prism_image    emmc                /dev/block/platform/bootdevice/by-name/prism      flags=backup=1;flashimg=1;display="Prism Image";
 /gz1            emmc                /dev/block/platform/bootdevice/by-name/gz1
 /misc           emmc                /dev/block/platform/bootdevice/by-name/misc       flags=backup=1;flashimg=1;display="Misc";
-/efs            ext4                /dev/block/platform/bootdevice/by-name/efs        flags=backup=1;backup=1;display="EFS";
-/sec_efs        ext4                /dev/block/platform/bootdevice/by-name/sec_efs    flags=backup=1;backup=1;subpartitionof=/efs;
-/md1img         emmc                /dev/block/platform/bootdevice/by-name/md1img     flags=backup=1;backup=1;display="Modem";
-/md1dsp         emmc                /dev/block/platform/bootdevice/by-name/md1dsp     flags=backup=1;backup=1;subpartitionof=/md1img
-/md3img         emmc                /dev/block/platform/bootdevice/by-name/md3img     flags=backup=1;backup=1;subpartitionof=/md1img
-/md1arm7        emmc                /dev/block/platform/bootdevice/by-name/md1arm7    flags=backup=1;backup=1;subpartitionof=/md1img
+/efs            ext4                /dev/block/platform/bootdevice/by-name/efs        flags=backup=1;display="EFS";
+/sec_efs        ext4                /dev/block/platform/bootdevice/by-name/sec_efs    flags=backup=1;subpartitionof=/efs;
+/md1img         emmc                /dev/block/platform/bootdevice/by-name/md1img     flags=backup=1;display="Modem";
+/md1dsp         emmc                /dev/block/platform/bootdevice/by-name/md1dsp     flags=backup=1;subpartitionof=/md1img
+/md3img         emmc                /dev/block/platform/bootdevice/by-name/md3img     flags=backup=1;subpartitionof=/md1img
+/md1arm7        emmc                /dev/block/platform/bootdevice/by-name/md1arm7    flags=backup=1;subpartitionof=/md1img
 /dtbo           emmc                /dev/block/platform/bootdevice/by-name/dtbo
 /spmfw          emmc                /dev/block/platform/bootdevice/by-name/spmfw
 /scp1           emmc                /dev/block/platform/bootdevice/by-name/scp1
