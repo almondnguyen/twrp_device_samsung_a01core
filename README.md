@@ -9,11 +9,11 @@ lunch twrp_a01core-eng
 make recoveryimage
 ```
 
-Supported Models: SM-A013F, SM-A013G, SM-A013G, SM-M013F.
+Supported Models: SM-A013F, SM-A013G, SM-A013M, SM-M013F.
 
 Blobs version:
 > Kernel base: A013FPUU1ATJ4
 
 > Ramdisk, DTB, DTBO base: A013GXXU4AVC6
 
-Kernel source: (not uploaded yet)
+Kernel source: https://github.com/almondnguyen/android_kernel_samsung_a01core
