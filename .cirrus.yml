@@ -1,0 +1,23 @@
+env:
+    # Config
+    CONFIG: CI_scripts/config.sh
+
+    # Cirrus Specific Vars (Do *NOT* Change)
+    CIRRUS_SHELL: bash
+
+task:
+  name: "TWRP Recovery Build"
+  timeout_in: 120m
+  container:
+      image: ghcr.io/sushrut1101/docker:latest
+      cpu: 8
+      memory: 20G
+#
+#  Sync_script:
+#      - bash CI_scripts/sync.sh
+#
+#  Build_script:
+#
+#  Upload_script:
+#      - export TIMEOUT=43200 # Link timeout (in minutes)
+#      - curl
