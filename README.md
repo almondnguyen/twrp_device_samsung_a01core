@@ -17,3 +17,5 @@ Blobs version:
 > Ramdisk, DTB, DTBO base: A013GXXU4AVC6
 
 Kernel source: https://github.com/almondnguyen/android_kernel_samsung_a01core
+
+CirrusCI scripts provided by Sushrut1111
