@@ -14,11 +14,11 @@ task:
       memory: 20G
 
   Sync_script:
-     - curl -sL https://raw.githubusercontent.com/almondnguyen/twrp_device_samsung_a01core/twrp-12.1/CI_scripts/sync.sh | bash
+     - curl -sL https://raw.githubusercontent.com/almondnguyen/twrp_device_samsung_a01core/twrp-11/CI_scripts/sync.sh | bash
 
   Build_script:
-     - curl -sL https://raw.githubusercontent.com/almondnguyen/twrp_device_samsung_a01core/twrp-12.1/CI_scripts/build.sh | bash
+     - curl -sL https://raw.githubusercontent.com/almondnguyen/twrp_device_samsung_a01core/twrp-11/CI_scripts/build.sh | bash
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - curl -sL  https://raw.githubusercontent.com/almondnguyen/twrp_device_samsung_a01core/twrp-12.1/CI_scripts/upload.sh | bash
+      - curl -sL  https://raw.githubusercontent.com/almondnguyen/twrp_device_samsung_a01core/twrp-11/CI_scripts/upload.sh | bash
