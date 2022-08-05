@@ -2,8 +2,8 @@
 
 # Device
 export TWRP_MANIFEST="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git"
-export TWRP_BRANCH="twrp-12.1"
-export DT_LINK="https://github.com/almondnguyen/twrp_device_samsung_a01core -b twrp-12.1"
+export TWRP_BRANCH="twrp-11"
+export DT_LINK="https://github.com/almondnguyen/twrp_device_samsung_a01core -b twrp-11"
 
 export DEVICE="a01core"
 export OEM="samsung"
