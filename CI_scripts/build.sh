@@ -25,7 +25,7 @@ source build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
 
 # lunch the target
-if [ "$TWRP_BRANCH" = "twrp-12.1" ]; then
+if [ "$TWRP_BRANCH" = "twrp-11" ]; then
     lunch twrp_${DEVICE}-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
 else
     lunch omni_${DEVICE}-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
