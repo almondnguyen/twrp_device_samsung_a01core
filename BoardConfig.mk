@@ -96,10 +96,11 @@ BOARD_MKBOOTIMG_ARGS := \
 	--ramdisk_offset $(BOARD_RAMDISK_OFFSET) \
 	--tags_offset $(BOARD_KERNEL_TAGS_OFFSET) \
 	--second_offset $(BOARD_KERNEL_SECOND_OFFSET) \
-	--header_version $(BOARD_BOOTIMG_HEADER_VERSION) \
 	--board $(TARGET_BOOTLOADER_BOARD_NAME) \
 	--dt $(BOARD_PREBUILT_DTBIMAGE) \
 	--dtb_offset $(BOARD_DTB_OFFSET)
+	
+#	--header_version $(BOARD_BOOTIMG_HEADER_VERSION) \
 #
 #BOARD_CUSTOM_BOOTIMG := true
 #BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
