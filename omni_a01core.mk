@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += charger_res_images
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := twrp_a01core
+PRODUCT_NAME := omni_a01core
 PRODUCT_DEVICE := a01core
 PRODUCT_MODEL := SM-A013G
 PRODUCT_BRAND := samsung
