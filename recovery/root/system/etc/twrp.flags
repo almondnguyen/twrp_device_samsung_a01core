@@ -10,7 +10,6 @@
 /product_image  emmc                /dev/block/mapper/product                         flags=backup=1;display="Product Image";flashimg=1;wipeingui;
 
 # Physical partitions
-/metadata       ext4                /dev/block/platform/bootdevice/by-name/md_udc     flags=backup=1;display="Metadata";
 /boot           emmc                /dev/block/platform/bootdevice/by-name/boot       flags=backup=1;flashimg=1;display="Boot";
 /recovery       emmc                /dev/block/platform/bootdevice/by-name/recovery   flags=backup=1;flashimg=1;display="Recovery";
 /data           f2fs                /dev/block/platform/bootdevice/by-name/userdata   flags=backup=1;display="Userdata";length=-16384;wipeingui;
@@ -24,9 +23,6 @@
 /efs            ext4                /dev/block/platform/bootdevice/by-name/efs        flags=backup=1;display="EFS";
 /sec_efs        ext4                /dev/block/platform/bootdevice/by-name/sec_efs    flags=backup=1;subpartitionof=/efs;
 /md1img         emmc                /dev/block/platform/bootdevice/by-name/md1img     flags=backup=1;display="Modem";
-/md1dsp         emmc                /dev/block/platform/bootdevice/by-name/md1dsp     flags=backup=1;subpartitionof=/md1img
-/md3img         emmc                /dev/block/platform/bootdevice/by-name/md3img     flags=backup=1;subpartitionof=/md1img
-/md1arm7        emmc                /dev/block/platform/bootdevice/by-name/md1arm7    flags=backup=1;subpartitionof=/md1img
 /dtbo           emmc                /dev/block/platform/bootdevice/by-name/dtbo
 /spmfw          emmc                /dev/block/platform/bootdevice/by-name/spmfw
 /scp1           emmc                /dev/block/platform/bootdevice/by-name/scp1
