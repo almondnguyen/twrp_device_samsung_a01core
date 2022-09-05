@@ -1,0 +1,63 @@
+service logger_msd /system/bin/logcat -b all -D -f /mnt/media_rw/4BF0-9E45/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service logger_msd_twrp /system/bin/logcat -b all -D -f /external_sd/boot_log_t.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service logger_cache /system/bin/logcat -b all -D -f /cache/logc/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service dmesg_msd /system/bin/cp /proc/last_kmsg /mnt/media_rw/4BF0-9E45/last_kmsg.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+    file /proc/last_kmsg r
+
+service dmesg_msd_twrp /system/bin/cp /external_sd/last_kmsg_t.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+    file /proc/last_kmsg r
+
+service dmesg_cache /system/bin/cp /proc/last_kmsg /cache/logc/last_kmsg.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+    file /proc/last_kmsg r
+
+on init
+    # Clear existing log and start the service
+    mkdir /cache/logc 0775 root system
+    start logger_msd
+    start logger_msd_twrp
+    start logger_cache
+    start dmesg_msd
+    start dmesg_msd_twrp
+    start dmesg_cache
+
+on property:sys.boot_completed=1
+    # Stop the logger service
+    stop logger_msd
+    stop logger_msd_twrp
+    stop logger_cache
+    stop dmesg_msd
+    stop dmesg_msd_twrp
+    stop dmesg_cache
