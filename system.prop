@@ -1,13 +1,6 @@
-ro.display.series=Samsung Galaxy A01 Core
-#ro.product.board=k39tv1_bsp_1g_titan
-ro.board.platform=mt6739
-#ro.treble.enabled=true
-
-Build.BRAND=MTK
-ro.mediatek.rsc_name=default
-ro.sys.current_rsc_path=/system/etc/rsc/default
-ro.product.current_rsc_path=/product/etc/rsc/default
-
+ro.treble.enabled=true
 sys.usb.controller=musb-hdrc
-ro.boot.dynamic_partitions=true
-#fbe.metadata.wrappedkey=true
+ro.mediatek.version.branch=alps-mp-q0.mp1.tc10sp
+ro.mediatek.version.release=alps-mp-q0.mp1.tc10sp-pre36_titan.q0mp1.k39tv1.bsp.1g.titan_P9
+
+ro.vendor.rc=/vendor/etc/init/hw/

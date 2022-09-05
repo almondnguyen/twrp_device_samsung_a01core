@@ -21,7 +21,7 @@ DEVICE_PATH := device/samsung/a01core
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Inherit some common TWRP stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += charger_res_images
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_a01core
+PRODUCT_NAME := twrp_a01core
 PRODUCT_DEVICE := a01core
 PRODUCT_MODEL := SM-A013G
 PRODUCT_BRAND := samsung
