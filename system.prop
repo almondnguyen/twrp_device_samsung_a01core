@@ -4,3 +4,4 @@ ro.mediatek.version.branch=alps-mp-q0.mp1.tc10sp
 ro.mediatek.version.release=alps-mp-q0.mp1.tc10sp-pre36_titan.q0mp1.k39tv1.bsp.1g.titan_P9
 
 ro.vendor.rc=/vendor/etc/init/hw/
+persist.service.adb.root=1
