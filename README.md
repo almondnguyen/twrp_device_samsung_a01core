@@ -20,7 +20,7 @@ make recoveryimage
 Supported Models: SM-A013F, SM-A013G, SM-A013M, SM-M013F.
 
 Blobs version:
-> Kernel base: A013FPUU1ATJ4
+> Kernel base: A013GXXU4AVF4
 
 > Ramdisk, DTB, DTBO base: A013GXXU4AVC6
 
