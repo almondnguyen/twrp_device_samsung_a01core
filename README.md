@@ -8,6 +8,14 @@ export ALLOW_MISSING_DEPENDENCIES=true
 lunch twrp_a01core-eng
 make recoveryimage
 ```
+> Work:
+- Boot
+- ADB
+- Install stuff
+
+> Bugs:
+- MTP
+- Finding more...
 
 Supported Models: SM-A013F, SM-A013G, SM-A013M, SM-M013F.
 
@@ -18,4 +26,3 @@ Blobs version:
 
 Kernel source: https://github.com/almondnguyen/android_kernel_samsung_a01core
 
-CirrusCI scripts provided by Sushrut1111
