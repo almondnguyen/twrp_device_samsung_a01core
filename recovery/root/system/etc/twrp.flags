@@ -1,12 +1,12 @@
 # mount point   fstype              device                      device2               flags
 # Dynamic Partitions
-/system         ext4                /dev/block/mapper/system                          wait,avb=vbmeta,logical,first_stage_mount,flags=backup=1;display="System";
+/system         ext4                /dev/block/mapper/system                          wait,logical,flags=backup=1;display="System";
 /system_image   emmc                /dev/block/mapper/system                          flags=backup=1;display="System Image";flashimg=1;wipeingui;
-/vendor         ext4                /dev/block/mapper/vendor                          wait,avb=vbmeta,logical,first_stage_mount,flags=backup=1;display="Vendor";
+/vendor         ext4                /dev/block/mapper/vendor                          wait,logical,flags=backup=1;display="Vendor";
 /vendor_image   emmc                /dev/block/mapper/vendor                          flags=backup=1;display="Vendor Image";flashimg=1;wipeingui;
-/odm            ext4                /dev/block/mapper/odm                             wait,avb=vbmeta,logical,first_stage_mount,flags=backup=1;display="ODM";
+/odm            ext4                /dev/block/mapper/odm                             wait,logical,flags=backup=1;display="ODM";
 /odm_image      emmc                /dev/block/mapper/odm                             flags=backup=1;display="ODM Image";flashimg=1;wipeingui;
-/product        ext4                /dev/block/mapper/product                         wait,avb=vbmeta,logical,first_stage_mount,flags=backup=1;display="Product";
+/product        ext4                /dev/block/mapper/product                         wait,logical,flags=backup=1;display="Product";
 /product_image  emmc                /dev/block/mapper/product                         flags=backup=1;display="Product Image";flashimg=1;wipeingui;
 
 # Physical partitions
