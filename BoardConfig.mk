@@ -28,7 +28,6 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Architecture
-# This phone is binder64, despite Samsung only providing arm kernel
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := armeabi-v7a
@@ -39,14 +38,7 @@ TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_BOARD_PLATFORM := mt6739
 TARGET_USES_64_BIT_BINDER := true
 
-TARGET_CPU_SMP := true
-ENABLE_CPUSETS := true
-ENABLE_SCHEDBOOST := true
-
 BOARD_SUPPRESS_SECURE_ERASE := true
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := a01core
 
 # Filesystems and Partitions
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -69,8 +61,7 @@ BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm
 BOARD_USES_METADATA_PARTITION := true
 
 # System as root
-BOARD_ROOT_EXTRA_FOLDERS := cache carrier efs keydata keyrefuge optics prism omr spu \
-	carrier mdm # A01 Core stock rec
+BOARD_ROOT_EXTRA_FOLDERS := cache carrier efs keydata keyrefuge optics prism omr spu
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
