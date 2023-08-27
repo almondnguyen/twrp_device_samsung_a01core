@@ -13,12 +13,12 @@ make recoveryimage
 > Bugs:
 - Cannot reboot for some languages, probably upstream bug.
 
-Supported Models: SM-A013F, SM-A013G, SM-A013M, SM-M013F.
+---
 
-Blobs version:
-> Kernel base: A013GXXU4AVF4
+> Supported Models: SM-A013F, SM-A013G, SM-A013M, SM-M013F.
 
-> Ramdisk, DTB, DTBO base: A013GXXU4AVC6
-
-Kernel source: https://github.com/almondnguyen/android_kernel_samsung_a01core
+> Blobs version:
+- Kernel base: A013GXXU4AVF4
+- Kernel source: https://github.com/almondnguyen/android_kernel_samsung_a01core
+- Ramdisk, DTB, DTBO base: A013GXXU4AVC6
 
