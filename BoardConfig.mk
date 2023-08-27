@@ -62,8 +62,6 @@ BOARD_USES_METADATA_PARTITION := true
 
 # System as root
 BOARD_ROOT_EXTRA_FOLDERS := cache carrier efs keydata keyrefuge optics prism omr spu
-
-# Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 AB_OTA_UPDATER := false
