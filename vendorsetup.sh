@@ -39,8 +39,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export LC_ALL="C"
     export ALLOW_MISSING_DEPENDENCIES=true
     export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-    export USE_CCACHE=1
-    export CCACHE_EXEC=/usr/bin/ccache
+#    export USE_CCACHE=1
+#    export CCACHE_EXEC=/usr/bin/ccache
     
     # samsung patches
     export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
