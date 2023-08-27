@@ -8,14 +8,10 @@ export ALLOW_MISSING_DEPENDENCIES=true
 lunch twrp_a01core-eng
 make recoveryimage
 ```
-> Work:
-- Boot
-- ADB
-- Install stuff
+> Status: Stable-ish
 
 > Bugs:
-- MTP
-- Finding more...
+- Cannot reboot for some languages, probably upstream bug.
 
 Supported Models: SM-A013F, SM-A013G, SM-A013M, SM-M013F.
 
