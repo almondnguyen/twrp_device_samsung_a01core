@@ -35,13 +35,9 @@ odm                                                /odm            ext4        r
 /dev/block/platform/bootdevice/by-name/recovery    /recovery       emmc        defaults                  recoveryonly
 /dev/block/platform/bootdevice/by-name/userdata    /data           f2fs        defaults                  wait,length=-16384
 /dev/block/platform/bootdevice/by-name/cache       /cache          ext4        defaults                  recoveryonly
-/dev/block/platform/bootdevice/by-name/sec_efs     /efs            ext4        defaults                  recoveryonly
 /dev/block/platform/bootdevice/by-name/carrier     /carrier        ext4        defaults                  recoveryonly
 /dev/block/platform/bootdevice/by-name/hidden      /preload        ext4        defaults                  recoveryonly
 /dev/block/platform/bootdevice/by-name/misc        /misc           emmc        defaults                  recoveryonly
-
-# external SD card
-/dev/block/mmcblk1p1                               /sdcard         auto        defaults                  recoveryonly
 
 # FOTA
 /dev/block/platform/bootdevice/by-name/apnhlos     /modem          emmc        defaults                  recoveryonly
@@ -53,14 +49,4 @@ odm                                                /odm            ext4        r
 /dev/block/platform/bootdevice/by-name/scp1        /scp1           emmc        defaults                  recoveryonly
 /dev/block/platform/bootdevice/by-name/sspm_1      /sspm_1         emmc        defaults                  recoveryonly
 
-#Auto-generated code by FOTA Portal
-/dev/block/platform/bootdevice/by-name/optics      /optics         ext4        defaults                  recoveryonly
-/dev/block/platform/bootdevice/by-name/prism       /prism          ext4        defaults                  recoveryonly
-
-
-
-
-#Auto-generated code by FOTA Portal
 /dev/block/platform/bootdevice/by-name/mcupmfw     /mcupmfw        emmc        defaults                  recoveryonly
-
-#Auto-generated code by FOTA Portal
