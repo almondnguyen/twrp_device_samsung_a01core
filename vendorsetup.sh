@@ -49,7 +49,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_RECOVERY_BOOT_PARTITION="/dev/block/by-name/boot"
 
     export OF_VANILLA_BUILD=1
-    export OF_NO_SAMSUNG_SPECIAL=0
+    export OF_NO_SAMSUNG_SPECIAL=1
 #    export FOX_DYNAMIC_SAMSUNG_FIX=1
 
     # a01core
