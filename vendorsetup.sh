@@ -21,11 +21,11 @@
 FDEVICE="a01core"
 
 fox_get_target_device() {
-local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
+local chkdev=$(echo "$BASH_SOURCE" | grep $FDEVICE)
    if [ -n "$chkdev" ]; then
       FOX_BUILD_DEVICE="$FDEVICE"
    else
-      chkdev=$(set | grep BASH_ARGV | grep \"$FDEVICE\")
+      chkdev=$(set | grep BASH_ARGV | grep $FDEVICE)
       [ -n "$chkdev" ] && FOX_BUILD_DEVICE="$FDEVICE"
    fi
 }
@@ -53,9 +53,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 #    export FOX_DYNAMIC_SAMSUNG_FIX=1
 
     # a01core
-    export TARGET_DEVICE_ALT="a01core"
-    export OF_TARGET_DEVICES="a01core"
-
     export OF_STATUS_H="88"
     export OF_SCREEN_H="1480"
 
